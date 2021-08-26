@@ -13,3 +13,14 @@ ul.social-networks li{
     color: white;
     padding: 10px;
 }
+.fa-facebook-official:hover{
+    color: rgb(4, 4, 129);
+}
+
+.fa-instagram:hover{
+    color: rgb(228, 2, 126);
+}
+
+.fa-linkedin:hover{
+    color: rgb(110, 154, 250);
+}
