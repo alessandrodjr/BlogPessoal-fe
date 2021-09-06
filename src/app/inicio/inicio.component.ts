@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-inicio',
@@ -10,15 +11,16 @@ import { environment } from 'src/environments/environment.prod';
 export class InicioComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private auth: AuthService,
   ) { }
 
   ngOnInit() {
 
     if(environment.token == ''){
-
       this.router.navigate(['/entrar']);
     }
+    this.auth.logado();
   }
 
 }
